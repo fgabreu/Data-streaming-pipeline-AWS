@@ -68,6 +68,3 @@ raw_data_path = '/Users/felipeabreu/Data-streaming-pipeline-AWS/dados/raw_data'
 
 # Executa o processamento e a publicação
 process_and_publish_data(raw_data_path)
-
-
-
