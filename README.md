@@ -47,7 +47,7 @@ A arquitetura do pipeline é composta pelos seguintes componentes:
 
 A seguinte imagem ilustra a arquitetura do pipeline:
 
-![Arquitetura do Projeto](/Users/felipeabreu/Data-streaming-pipeline-AWS/Arquitetura do Projeto/arquietetura_projeto_aws.jpg)
+![Image](https://github.com/user-attachments/assets/9f0f56bb-1312-41e7-a0f9-ffff6e04ac13)
 
 
 # Fluxo de Dados:
@@ -59,6 +59,7 @@ A seguinte imagem ilustra a arquitetura do pipeline:
 5.  Os dados armazenados no Amazon S3 podem ser utilizados para análises de Big Data e para backups de longo prazo.
 
 
+
 # Padrões de Projeto:
 
 *   **Filas de Mensagens (Amazon SNS):** Permitem o desacoplamento entre os componentes do pipeline, garantindo a escalabilidade e a resiliência.
@@ -68,6 +69,7 @@ A seguinte imagem ilustra a arquitetura do pipeline:
 *   **Idempotência:** Garante que as mensagens sejam processadas apenas uma vez, evitando a duplicidade de dados.
 
 
+----------------------------------------------------------------------------------------------------------
 
 # Processo de desenvolvimento:
 
@@ -188,26 +190,37 @@ Objetivo: Organizar os arquivos JSON no bucket S3 em uma estrutura hierárquica 
 
 Estrutura de Pastas do Data Lake:
 
-historico-consumo-fazendas/
-└── historico_diario/
-    ├── fazenda_um/
-    │   └── 2024/
-    │       └── 03/
-    │           └── 20/
-    │               └── historico_consumo_2024-03-20 10:30:45.123.json
-    └── fazenda_dois/
-        └── 2024/
-            └── 03/
-                └── 20/
-                    └── historico_consumo_2024-03-20 11:15:30.456.json
+![Image](https://github.com/user-attachments/assets/6fe734c1-c797-498c-ac65-03653e29c38f)
 
 Explicação:
 
-O bucket historico-consumo-fazendas armazena todos os dados de histórico de consumo.
-A pasta historico_diario armazena os dados diários.
-As subpastas fazenda_um e fazenda_dois representam as fazendas.
-As subpastas 2024/03/20 representam o ano, mês e dia dos dados.
-Os arquivos JSON são nomeados com o timestamp completo para garantir a unicidade.
+- O bucket historico-consumo-fazendas armazena todos os dados de histórico de consumo.
+- A pasta historico_diario armazena os dados diários.
+- As subpastas fazenda_um e fazenda_dois representam as fazendas.
+- As subpastas 2024/03/20 representam o ano, mês e dia dos dados (por hierarquia de data).
+- Os arquivos JSON são nomeados com o timestamp completo para garantir a unicidade.
 
 
+----------------------------------------------------------------------------------------------------------
+
+# Resultados do Projeto:
+
+1 - Resultado da Função Lambda na AWS tendo o topico do SNS como gatilho:
+
+![Image](https://github.com/user-attachments/assets/dde5273c-2969-4fe0-ae74-b5fe909e1996)
+
+
+2 - Estruturação do Data Lake servindo para backup dos arquivos de cada mensagem no formato json:
+
+![Image](https://github.com/user-attachments/assets/e1746cd3-122a-4059-ae25-18f965419cf5)
+
+
+3 - Query 01 na tabela **historico_consumo** armazenada no Data Warehouse mostrando a quantidade de registros por fazenda:
+
+![Image](https://github.com/user-attachments/assets/aa79ba9b-c876-42b0-a692-79c5d849c77f)
+
+
+4 - Query 02 na tabela **historico_consumo** armazenada no Data Warehouse mostrando o consumo médio por fazenda:
+
+![Image](https://github.com/user-attachments/assets/5f446a45-f1bf-4d26-99b1-921a8ea96183)
 
