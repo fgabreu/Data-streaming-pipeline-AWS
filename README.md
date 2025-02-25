@@ -188,18 +188,7 @@ Objetivo: Organizar os arquivos JSON no bucket S3 em uma estrutura hierárquica 
 
 Estrutura de Pastas do Data Lake:
 
-historico-consumo-fazendas/
-└── historico_diario/
-    ├── fazenda_um/
-    │   └── 2024/
-    │       └── 03/
-    │           └── 20/
-    │               └── historico_consumo_2024-03-20 10:30:45.123.json
-    └── fazenda_dois/
-        └── 2024/
-            └── 03/
-                └── 20/
-                    └── historico_consumo_2024-03-20 11:15:30.456.json
+![Image](https://github.com/user-attachments/assets/6fe734c1-c797-498c-ac65-03653e29c38f)
 
 Explicação:
 
