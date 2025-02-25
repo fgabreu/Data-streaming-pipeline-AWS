@@ -47,7 +47,7 @@ A arquitetura do pipeline é composta pelos seguintes componentes:
 
 A seguinte imagem ilustra a arquitetura do pipeline:
 
-![Arquitetura do Projeto](/Users/felipeabreu/Data-streaming-pipeline-AWS/Arquitetura do Projeto/arquietetura_projeto_aws.jpg)
+![Image](https://github.com/user-attachments/assets/9f0f56bb-1312-41e7-a0f9-ffff6e04ac13)
 
 
 # Fluxo de Dados:
