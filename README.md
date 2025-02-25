@@ -224,3 +224,20 @@ Explicação:
 
 ![Image](https://github.com/user-attachments/assets/5f446a45-f1bf-4d26-99b1-921a8ea96183)
 
+
+
+
+
+
+
+![Image](https://github.com/user-attachments/assets/dde5273c-2969-4fe0-ae74-b5fe909e1996)
+
+
+![Image](https://github.com/user-attachments/assets/e1746cd3-122a-4059-ae25-18f965419cf5)
+
+
+![Image](https://github.com/user-attachments/assets/aa79ba9b-c876-42b0-a692-79c5d849c77f)
+
+
+![Image](https://github.com/user-attachments/assets/5f446a45-f1bf-4d26-99b1-921a8ea96183)
+
